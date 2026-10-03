@@ -1,0 +1,18 @@
+# ── Log & cache runtime (diisi otomatis oleh aplikasi) ──
+application/logs/*
+!application/logs/index.html
+application/cache/*
+!application/cache/index.html
+
+# ── Editor & sistem ──
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Dependency (bila suatu saat ditambahkan) ──
+node_modules/
+vendor/

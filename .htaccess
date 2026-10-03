@@ -1,0 +1,14 @@
+# ============================================================
+# AHASS Booking Servis — Apache rewrite (CodeIgniter 3)
+# ============================================================
+RewriteEngine On
+
+# Jangan proses jika sudah berupa file/folder nyata
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Semua request -> index.php (hapus index.php dari URL)
+RewriteRule ^(.*)$ index.php/$1 [L]
+
+# Larang akses langsung ke folder sensitif
+RewriteRule ^(application|system|database) - [F,L]
